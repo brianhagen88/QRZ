@@ -1,619 +1,1022 @@
 <html>
-<head>
-<meta charset="UTF-8">
-</head>
-<body>
-<div style="background:#071521; color:#d9e6ef; font-family:Arial,Helvetica,sans-serif; margin-bottom:0; margin-left:auto; margin-right:auto; margin-top:0; max-width:1100px; padding:0">
-	<!-- =========================================================
-		HEADER IMAGE
-		Replace HEADER_IMAGE_URL with your hosted header image
-		========================================================= -->
-	<div style="margin-bottom:12px; margin-left:0; margin-right:0; margin-top:0; text-align:center">
-		<img alt="KR3LAX Amateur Radio"
-		     src="header.gif"
-		     style="border:0px; width:1100px"/>
-	</div>
-	<!-- =========================================================
-		 Visitors
-		 ========================================================= -->
-	<div style="background:#0b2638; border-radius:8px; border:1px solid #32739b; color:#f4b942; font-family:Oswald; font-size:19px; font-weight:bold; letter-spacing:0.3px; margin-bottom:6px; margin-left:8px; margin-right:8px; margin-top:10px; padding:10px 14px; text-transform:uppercase; text-align:center; vertical-align:top">
-		<a href="https://info.flagcounter.com/X0f8"
-		   target="_blank">
-			<img alt="Flag Counter"
-			     border="0"
-			     src="https://s01.flagcounter.com/countxl/X0f8/bg_0B2638/txt_F4B942/border_0B2638/columns_8/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/"/>
-		</a>
-	</div>
-	<!-- =========================================================
-		 CURRENT SOLAR 
-		 ========================================================= -->
-	<div style="background:#0b2638; border-radius:8px; border:1px solid #32739b; color:#f4b942; font-family:Oswald; font-size:19px; font-weight:bold; letter-spacing:0.3px; margin-bottom:6px; margin-left:8px; margin-right:8px; margin-top:10px; padding:10px 14px; text-transform:uppercase; vertical-align:middle;">
-		<img src="https://www.qrz.com/hampages/kr3lax/CURRENTSOLAR.png"
-		     style="height:19px; width:371px"/>
-	</div>
-	<table border="0"
-	       cellpadding="0"
-	       cellspacing="8"
-	       style="width:100%">
-		<tbody>
-			<tr>
-				<td colspan="100%"
-				    style="background-color:#081a27; background:#081a27; border-color:#276184; border-radius:8px; border-style:solid; border-width:1px; padding:12px; text-align:center; vertical-align:top">
-					<div style="color:#58bfff; font-size:16px; font-weight:bold; margin-bottom:8px">HF PROPAGATION</div>
-					<p>
-						<a href="https://www.hamqsl.com/solar.html"
-						   target="_blank"
-						   title="Click to add Solar-Terrestrial Data to your website!">
-							<img alt="Solar Data"
-							     src="https://www.hamqsl.com/solar101vhf.php"
-							     style="max-width:600px; width:100%"/>
-						</a>
-					</p>
-				</td>
-			</tr>
-			<tr>
-				<td style="background-color:#081a27; background:#081a27; border-color:#276184; border-radius:8px; border-style:solid; border-width:1px; padding:12px; text-align:center; vertical-align:top">
-					<div style="color:#58bfff; font-size:16px; font-weight:bold; margin-bottom:8px">CURRENT WORLD MUF / PROPAGATION</div>
-					<p>
-						<a alt="Solar-Terrestrial Data"
-						   href="https://www.hamqsl.com/solar.html"
-						   style="width: 100%;max-width:1000px;"
-						   target="_blank"
-						   title="Click to add Solar-Terrestrial Data to your website!">
-							<img src="https://www.hamqsl.com/solarmap.php"/>
-						</a>
-					</p>
-				</td>
-				<td style="background-color:#081a27; background:#081a27; border-color:#276184; border-radius:8px; border-style:solid; border-width:1px; padding:12px; text-align:center; vertical-align:top">
-					<div style="color:#58bfff; font-size:16px; font-weight:bold; margin-bottom:8px">SOLAR-TERRESTRIAL DATA</div>
-					<p>
-						<a href="https://www.hamqsl.com/solar.html"
-						   style="width: 100%; max-width:800px;"
-						   target="_blank"
-						   title="Click to add Solar-Terrestrial Data to your website!">
-							<img src="https://www.hamqsl.com/solarpich.php"/>
-						</a>
-					</p>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<!-- =========================================================
+  <head>
+    <meta charset="UTF-8" />
+
+    <style>
+      .section_headers {
+        background: #0b2638;
+        border-radius: 8px;
+        border: 1px solid #32739b;
+        color: #f4b942;
+        font-family: Oswald;
+        font-size: 19px;
+        font-weight: bold;
+        letter-spacing: 0.3px;
+        margin-bottom: 6px;
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-top: 20px;
+        padding: 10px 14px;
+        text-transform: uppercase;
+        vertical-align: middle;
+      }
+
+      .subsection_header {
+        color: #f4b942;
+        font-family: Oswald;
+        font-size: 17px;
+        font-weight: bold;
+        letter-spacing: 0.3px;
+        margin-bottom: 10px;
+      }
+
+      .bottom_sections {
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      .bottom_section {
+        background: #081a27;
+        border: 1px solid #276184;
+        border-radius: 8px;
+        padding: 15px;
+        text-align: left;
+        vertical-align: top;
+        width: 33.33%;
+      }
+
+      .bottom_section_content {
+        color: #ffffff;
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      .blue_title {
+        color: #58bfff !important;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .propagation_tools {
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      .propagation_tool {
+        background: #0d2b40;
+        border: 1px solid #3383b5;
+        border-radius: 8px;
+        padding: 13px 10px;
+        text-align: center;
+        vertical-align: middle;
+        width: 25%;
+      }
+
+      .propagation_tool a {
+        color: #58bfff;
+        text-decoration: none;
+      }
+
+      .propagation_tool_desc {
+        color: #ffffff;
+        font-size: 12px;
+      }
+
+      .morse_resources,
+      .rf_reference,
+      .rf_tools {
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      .morse_resource,
+      .rf_reference_item,
+      .rf_tool {
+        background: #0d2b40;
+        border: 1px solid #3383b5;
+        border-radius: 8px;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .morse_resource {
+        padding: 12px 14px;
+      }
+
+      .rf_reference_item {
+        padding: 12px 14px;
+      }
+
+      .rf_tool {
+        padding: 10px 13px;
+      }
+
+      .card_link {
+        color: #58bfff;
+        text-decoration: none;
+      }
+
+      .card_desc {
+        color: #ffffff;
+        font-size: 12px;
+      }
+
+      .rf_value {
+        color: #ffffff;
+        font-size: 13px;
+        text-decoration: none;
+      }
+
+      .band_reference_links,
+      .az_resources {
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      .band_reference_link,
+      .az_resource {
+        background: #0d2b40;
+        border: 1px solid #3383b5;
+        border-radius: 8px;
+        padding: 10px 13px;
+        text-align: center;
+        vertical-align: middle;
+        width: 25%;
+      }
+
+      .band_reference_link a,
+      .az_resource a {
+        color: #58bfff;
+        text-decoration: none;
+      }
+
+      .satellite_operations {
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      .satellite_card {
+        background: #0d2b40;
+        border: 1px solid #3383b5;
+        border-radius: 8px;
+        padding: 14px 10px;
+        text-align: center;
+        vertical-align: middle;
+        width: 25%;
+      }
+
+      .satellite_icon {
+        font-size: 42px;
+        line-height: 1.15;
+        margin-bottom: 3px;
+      }
+
+      .satellite_icon a,
+      .satellite_card > a {
+        color: #58bfff;
+        text-decoration: none;
+      }
+
+      .satellite_desc {
+        color: #ffffff;
+        font-size: 12px;
+      }
+
+      .live_radio_tools {
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      .live_radio_card {
+        background: #0d2b40;
+        border: 1px solid #3383b5;
+        border-radius: 8px;
+        padding: 10px;
+        text-align: center;
+        vertical-align: middle;
+        width: 25%;
+      }
+
+      .live_radio_icon {
+        font-size: 28px;
+        line-height: 1.05;
+        margin-bottom: 1px;
+      }
+
+      .live_radio_icon a,
+      .live_radio_card > a {
+        color: #58bfff;
+        text-decoration: none;
+      }
+
+      .live_radio_desc {
+        color: #ffffff;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      style="
+        background: #071521;
+        color: #d9e6ef;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        max-width: 1100px;
+        padding: 0;
+      "
+    >
+      <!-- =========================================================
+        HEADER IMAGE
+        ========================================================= -->
+
+      <div
+        style="
+          margin-bottom: 12px;
+          margin-left: 0;
+          margin-right: 0;
+          margin-top: 0;
+          text-align: center;
+        "
+      >
+        <img
+          alt="KR3LAX Amateur Radio"
+          src="header.gif"
+          style="border: 0px; width: 1100px"
+        />
+      </div>
+
+      <!-- =========================================================
+         Visitors
+         ========================================================= -->
+
+      <div
+        style="
+          background: #0b2638;
+          border-radius: 8px;
+          border: 1px solid #32739b;
+          color: #f4b942;
+          font-family: Oswald;
+          font-size: 19px;
+          font-weight: bold;
+          letter-spacing: 0.3px;
+          margin-bottom: 6px;
+          margin-left: 8px;
+          margin-right: 8px;
+          margin-top: 10px;
+          padding: 10px 14px;
+          text-transform: uppercase;
+          text-align: center;
+          vertical-align: top;
+        "
+      >
+        <a href="https://info.flagcounter.com/X0f8" target="_blank">
+          <img
+            alt="Flag Counter"
+            border="0"
+            src="https://s01.flagcounter.com/countxl/X0f8/bg_0B2638/txt_F4B942/border_0B2638/columns_8/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/"
+          />
+        </a>
+      </div>
+
+      <!-- =========================================================
+         CURRENT SOLAR&#x20;
+         ========================================================= -->
+
+      <div class="section_headers">CURRENT SOLAR & PROPAGATION CONDITIONS</div>
+
+      <table border="0" cellpadding="0" cellspacing="8" style="width: 100%">
+        <tbody>
+          <tr>
+            <td
+              colspan="100%"
+              style="
+                background-color: #081a27;
+                background: #081a27;
+                border-color: #276184;
+                border-radius: 8px;
+                border-style: solid;
+                border-width: 1px;
+                padding: 12px;
+                text-align: center;
+                vertical-align: top;
+              "
+            >
+              <div class="blue_title" style="margin-bottom: 8px">
+                HF PROPAGATION
+              </div>
+
+              <p>
+                <a
+                  href="https://www.hamqsl.com/solar.html"
+                  target="_blank"
+                  title="Click to add Solar-Terrestrial Data to your website!"
+                >
+                  <img
+                    alt="Solar Data"
+                    src="https://www.hamqsl.com/solar101vhf.php"
+                    style="max-width: 600px; width: 100%"
+                  />
+                </a>
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td
+              style="
+                background-color: #081a27;
+                background: #081a27;
+                border-color: #276184;
+                border-radius: 8px;
+                border-style: solid;
+                border-width: 1px;
+                padding: 12px;
+                text-align: center;
+                vertical-align: top;
+              "
+            >
+              <div class="blue_title" style="margin-bottom: 8px">
+                CURRENT WORLD MUF / PROPAGATION
+              </div>
+
+              <p>
+                <a
+                  alt="Solar-Terrestrial Data"
+                  href="https://www.hamqsl.com/solar.html"
+                  style="width: 100%; max-width: 1000px"
+                  target="_blank"
+                  title="Click to add Solar-Terrestrial Data to your website!"
+                >
+                  <img src="https://www.hamqsl.com/solarmap.php" />
+                </a>
+              </p>
+            </td>
+
+            <td
+              style="
+                background-color: #081a27;
+                background: #081a27;
+                border-color: #276184;
+                border-radius: 8px;
+                border-style: solid;
+                border-width: 1px;
+                padding: 12px;
+                text-align: center;
+                vertical-align: top;
+              "
+            >
+              <div class="blue_title" style="margin-bottom: 8px">
+                SOLAR-TERRESTRIAL DATA
+              </div>
+
+              <p>
+                <a
+                  href="https://www.hamqsl.com/solar.html"
+                  style="width: 100%; max-width: 800px"
+                  target="_blank"
+                  title="Click to add Solar-Terrestrial Data to your website!"
+                >
+                  <img src="https://www.hamqsl.com/solarpich.php" />
+                </a>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- =========================================================
      PROPAGATION TOOLS
      ========================================================= -->
-	<div style="background:#0b2638; border-radius:8px; border:1px solid #32739b; color:#f4b942; font-family:Oswald; font-size:19px; font-weight:bold; letter-spacing:0.3px; margin-bottom:6px; margin-left:8px; margin-right:8px; margin-top:10px; padding:10px 14px; text-transform:uppercase; vertical-align:middle;">
-		<img src="https://www.qrz.com/hampages/kr3lax/PROPTOOLS.png"
-		     style="height:18px; width:170px"/>
-	</div>
-	<table border="0"
-	       cellpadding="6"
-	       cellspacing="8"
-	       style="width:100%">
-		<tbody>
-			<tr>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:15px; text-align:center; vertical-align:top; width:25%">
-					<a href="https://www.voacap.com/hf/"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>VOACAP</strong>
-						<br/>
-						<span style="color:#ffffff;font-size:12px">HF Propagation Prediction</span>
-					</a>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:15px; text-align:center; vertical-align:top; width:25%">
-					<a href="https://www.dxmaps.com/spots/mapg.php?Lan=E"
-					   style="color:#58bfff;; text-decoration:none;"
-					   target="_blank">
-						<strong>DXMAPS</strong>
-						<br/>
-						<span style="color:#ffffff;font-size:12px">Band Opening Maps</span>
-					</a>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:15px; text-align:center; vertical-align:top; width:25%">
-					<a href="https://www.swpc.noaa.gov/"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>NOAA SWPC</strong>
-						<br/>
-						<span style="color:#ffffff;font-size:12px">Space Weather</span>
-					</a>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:15px; text-align:center; vertical-align:top; width:25%">
-					<a href="https://www.solarham.com/"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>SOLARHAM</strong>
-						<br/>
-						<span style="color:#ffffff;font-size:12px">Solar &amp; Geomagnetic Data</span>
-					</a>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<!-- =========================================================
+
+      <div class="section_headers">PROPAGATION TOOLS</div>
+
+      <table
+        class="propagation_tools"
+        border="0"
+        cellpadding="6"
+        cellspacing="8"
+      >
+        <tbody>
+          <tr>
+            <td class="propagation_tool">
+              <a href="https://www.voacap.com/hf/" target="_blank">
+                <strong class="blue_title">VOACAP</strong>
+
+                <br />
+
+                <span class="propagation_tool_desc"
+                  >HF Propagation Prediction</span
+                >
+              </a>
+            </td>
+
+            <td class="propagation_tool">
+              <a
+                href="https://www.dxmaps.com/spots/mapg.php?Lan=E"
+                target="_blank"
+              >
+                <strong class="blue_title">DXMAPS</strong>
+
+                <br />
+
+                <span class="propagation_tool_desc">Band Opening Maps</span>
+              </a>
+            </td>
+
+            <td class="propagation_tool">
+              <a href="https://www.swpc.noaa.gov/" target="_blank">
+                <strong class="blue_title">NOAA SWPC</strong>
+
+                <br />
+
+                <span class="propagation_tool_desc">Space Weather</span>
+              </a>
+            </td>
+
+            <td class="propagation_tool">
+              <a href="https://www.solarham.com/" target="_blank">
+                <strong class="blue_title">SOLARHAM</strong>
+
+                <br />
+
+                <span class="propagation_tool_desc"
+                  >Solar &amp; Geomagnetic Data</span
+                >
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- =========================================================
      SATELLITE OPERATIONS
      ========================================================= -->
-	<div style="background:#0b2638; border-radius:8px; border:1px solid #32739b; color:#f4b942; font-family:Oswald; font-size:19px; font-weight:bold; letter-spacing:0.3px; margin-bottom:6px; margin-left:8px; margin-right:8px; margin-top:10px; padding:10px 14px; text-transform:uppercase; vertical-align:middle;">
-		<img src="https://www.qrz.com/hampages/kr3lax/SATELLITEOPS.png"/>
-	</div>
-	<table border="0"
-	       cellpadding="6"
-	       cellspacing="8"
-	       style="width:100%">
-		<tbody>
-			<tr>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:15px; text-align:center; vertical-align:top; width:25%">
-					<div style="font-size:36px">
-						<a href="https://www.amsat.org/status/"
-						   style="color:#ffffff; text-decoration:none;"
-						   target="_blank">🛰</a>
-					</div>
-					<a href="https://www.amsat.org/status/"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>AMSAT STATUS</strong>
-						<br/>
-						<span style="font-size:12px;color:#ffffff;">Satellite Status</span>
-					</a>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:15px; text-align:center; vertical-align:top; width:25%">
-					<div style="font-size:36px">
-						<a href="https://network.satnogs.org/"
-						   style="color:#58bfff; text-decoration:none;"
-						   target="_blank">🌐</a>
-					</div>
-					<a href="https://network.satnogs.org/"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>SATNOGS</strong>
-						<br/>
-						<span style="font-size:12px;color:#ffffff;">Ground Station Network</span>
-					</a>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:15px; text-align:center; vertical-align:top; width:25%">
-					<div style="font-size:36px">
-						<a href="https://www.amsat.org/track/"
-						   style="color:#58bfff; text-decoration:none;"
-						   target="_blank">🎯</a>
-					</div>
-					<a href="https://www.amsat.org/track/"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>PASS PREDICTIONS</strong>
-						<br/>
-						<span style="font-size:12px;color:#ffffff;">Satellite Tracking</span>
-					</a>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:15px; text-align:center; vertical-align:top; width:25%">
-					<div style="font-size:36px">
-						<a href="https://www.ariss.org/current-status-of-iss-stations.html"
-						   style="color:#ffffff; text-decoration:none;"
-						   target="_blank">🚀</a>
-					</div>
-					<a href="https://www.ariss.org/current-status-of-iss-stations.html"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>ARISS / ISS</strong>
-						<br/>
-						<span style="font-size:12px;color:#ffffff;">ISS Amateur Radio</span>
-					</a>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<!-- =========================================================
-		RF QUICK REFERENCE
-		========================================================= -->
-	<div style="background:#0b2638; border-radius:8px; border:1px solid #32739b; color:#f4b942; font-family:Oswald; font-size:19px; font-weight:bold; letter-spacing:0.3px; margin-bottom:6px; margin-left:8px; margin-right:8px; margin-top:10px; padding:10px 14px; text-transform:uppercase; vertical-align:middle;">
-		<img src="https://www.qrz.com/hampages/kr3lax/RFQUICKREF.png"/>
-	</div>
-	<table border="0"
-	       cellpadding="8"
-	       cellspacing="8"
-	       style="width:100%">
-		<tbody>
-			<tr>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%;color:#58bfff;">
-					<strong>HALF-WAVE DIPOLE</strong>
-					<br/>
-					<span style="color:#ffffff; font-size:13px; text-decoration:none">Feet:<br/>
-						468 &#247; MHz							<br/>
-						Meters:							<br/>
-						142.65 divide; MHz						</span>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%;color:#58bfff;">
-					<strong>&frac14;-WAVE VERTICAL</strong>
-					<br/>
-					<span style="color:#ffffff; font-size:13px; text-decoration:none">Feet:<br/>
-						234 divide; MHz							<br/>
-						Meters:							<br/>
-						71.3 divide; MHz						</span>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%;color:#58bfff;">
-					<strong>WAVELENGTH</strong>
-					<br/>
-					<span style="color:#ffffff; font-size:13px; text-decoration:none">Meters:<br/>
-						299.8 divide; MHz							<br/>
-						Approx:							<br/>
-						300 divide; MHz						</span>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%;color:#58bfff;">
-					<strong>POWER</strong>
-					<br/>
-					<span style="color:#ffffff; font-size:13px; text-decoration:none">30 dBm = 1 W<br/>
-				40 dBm = 10 W							<br/>
-				50 dBm = 100 W							<br/>
-				60 dBm = 1 kW						</span>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<!-- =========================================================
+
+      <div class="section_headers">SATELLITE OPERATIONS</div>
+
+      <table
+        class="satellite_operations"
+        border="0"
+        cellpadding="6"
+        cellspacing="8"
+      >
+        <tbody>
+          <tr>
+            <td class="satellite_card">
+              <div class="satellite_icon">
+                <a
+                  href="https://www.amsat.org/status/"
+                  style="color: #ffffff"
+                  target="_blank"
+                  >🛰</a
+                >
+              </div>
+
+              <a href="https://www.amsat.org/status/" target="_blank">
+                <strong class="blue_title">AMSAT STATUS</strong>
+                <br />
+                <span class="satellite_desc">Satellite Status</span>
+              </a>
+            </td>
+
+            <td class="satellite_card">
+              <div class="satellite_icon">
+                <a
+                  href="https://network.satnogs.org/"
+                  style="color: #ffffff"
+                  target="_blank"
+                  >🌐</a
+                >
+              </div>
+
+              <a href="https://network.satnogs.org/" target="_blank">
+                <strong class="blue_title">SATNOGS</strong>
+                <br />
+                <span class="satellite_desc">Ground Station Network</span>
+              </a>
+            </td>
+
+            <td class="satellite_card">
+              <div class="satellite_icon">
+                <a href="https://www.amsat.org/track/" target="_blank">🎯</a>
+              </div>
+
+              <a href="https://www.amsat.org/track/" target="_blank">
+                <strong class="blue_title">PASS PREDICTIONS</strong>
+                <br />
+                <span class="satellite_desc">Satellite Tracking</span>
+              </a>
+            </td>
+
+            <td class="satellite_card">
+              <div class="satellite_icon">
+                <a
+                  href="https://www.ariss.org/current-status-of-iss-stations.html"
+                  target="_blank"
+                  >🚀</a
+                >
+              </div>
+
+              <a
+                href="https://www.ariss.org/current-status-of-iss-stations.html"
+                target="_blank"
+              >
+                <strong class="blue_title">ARISS / ISS</strong>
+                <br />
+                <span class="satellite_desc">ISS Amateur Radio</span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- =========================================================
+     MORSE CODE / CW RESOURCES
+     ========================================================= -->
+
+      <div class="section_headers">MORSE CODE / CW RESOURCES</div>
+      <table class="morse_resources" border="0" cellpadding="6" cellspacing="8">
+        <tbody>
+          <tr>
+            <td class="morse_resource">
+              <a class="card_link" href="https://lcwo.net/" target="_blank">
+                <strong class="blue_title">LCWO</strong>
+                <br />
+                <span class="card_desc">Learn &amp; Practice CW</span>
+              </a>
+            </td>
+
+            <td class="morse_resource">
+              <a
+                class="card_link"
+                href="https://morsecode.world"
+                target="_blank"
+              >
+                <strong class="blue_title">MORSECODE.WORLD</strong>
+                <br />
+                <span class="card_desc">Learn &amp; Practice CW</span>
+              </a>
+            </td>
+
+            <td class="morse_resource">
+              <a
+                class="card_link"
+                href="https://morsecode.world/international/morse.html"
+                target="_blank"
+              >
+                <strong style="color: #ffffff">·− </strong>
+                <strong class="blue_title">MORSE CODE</strong>
+                <br />
+                <span class="card_desc">Code Reference</span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- =========================================================
+     RF QUICK REFERENCE
+     ========================================================= -->
+
+      <div class="section_headers">RF QUICK REFERENCE</div>
+
+      <table class="rf_reference" border="0" cellpadding="8" cellspacing="8">
+        <tbody>
+          <tr>
+            <td class="rf_reference_item">
+              <a
+                target="_blank"
+                href="https://www.everythingrf.com/rf-calculators/dipole-antenna-length-calculator"
+              >
+                <strong class="blue_title">HALF-WAVE DIPOLE</strong>
+              </a>
+              <br />
+              <span class="rf_value"
+                >Feet:<br />468 &#247; MHz<br />Meters:<br />142.65 divide;
+                MHz</span
+              >
+            </td>
+
+            <td class="rf_reference_item">
+              <a
+                target="_blank"
+                href="https://www.66pacific.com/calculators/quarter-wave-vertical-antenna-calculator.aspx"
+              >
+                <strong class="blue_title">&frac14;-WAVE VERTICAL</strong>
+              </a>
+              <br />
+              <span class="rf_value"
+                >Feet:<br />234 divide; MHz<br />Meters:<br />71.3 divide;
+                MHz</span
+              >
+            </td>
+
+            <td class="rf_reference_item">
+              <strong class="blue_title">WAVELENGTH</strong>
+              <br />
+              <span class="rf_value"
+                >Meters:<br />299.8 divide; MHz<br />Approx:<br />300 divide;
+                MHz</span
+              >
+            </td>
+
+            <td class="rf_reference_item">
+              <strong class="blue_title">POWER</strong>
+              <br />
+              <span class="rf_value"
+                >30 dBm = 1 W<br />40 dBm = 10 W<br />50 dBm = 100 W<br />60 dBm
+                = 1 kW</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- =========================================================
      RF CALCULATOR LINKS
      ========================================================= -->
-	<table border="0"
-	       cellpadding="6"
-	       cellspacing="8"
-	       style="width:100%">
-		<tbody>
-			<tr>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:13px; text-align:center; vertical-align:top; width:25%;color:#58bfff;">
-					<a href="https://www.qsl.net/co8tw/Coax_Calculator.htm"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>COAX LOSS</strong>
-						<br/>
-						<span style="color:#ffffff;font-size:12px">Cable Calculator</span>
-					</a>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:13px; text-align:center; vertical-align:top; width:25%;color:#58bfff;">
-					<a href="https://www.levinecentral.com/ham/grid_square.php"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>GRID SQUARE</strong>
-						<br/>
-						<span style="color:#ffffff;font-size:12px">Maidenhead Locator</span>
-					</a>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:13px; text-align:center; vertical-align:top; width:25%;color:#58bfff;">
-					<a href="https://www.66pacific.com/calculators/swr-calculator.aspx"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>SWR</strong>
-						<br/>
-						<span style="color:#ffffff;font-size:12px">SWR / Return Loss</span>
-					</a>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:13px; text-align:center; vertical-align:top; width:25%;color:#58bfff;">
-					<a href="https://www.66pacific.com/calculators/coil-inductance-calculator.aspx"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>INDUCTANCE</strong>
-						<br/>
-						<span style="color:#ffffff;font-size:12px">Coil Calculator</span>
-					</a>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<!-- =========================================================
+
+      <table class="rf_tools" border="0" cellpadding="6" cellspacing="8">
+        <tbody>
+          <tr>
+            <td class="rf_tool">
+              <a
+                class="card_link"
+                href="https://www.qsl.net/co8tw/Coax_Calculator.htm"
+                target="_blank"
+              >
+                <strong class="blue_title">COAX LOSS</strong>
+                <br />
+                <span class="card_desc">Cable Calculator</span>
+              </a>
+            </td>
+
+            <td class="rf_tool">
+              <a
+                class="card_link"
+                href="https://www.levinecentral.com/ham/grid_square.php"
+                target="_blank"
+              >
+                <strong class="blue_title">GRID SQUARE</strong>
+                <br />
+                <span class="card_desc">Maidenhead Locator</span>
+              </a>
+            </td>
+
+            <td class="rf_tool">
+              <a
+                class="card_link"
+                href="https://www.66pacific.com/calculators/swr-calculator.aspx"
+                target="_blank"
+              >
+                <strong class="blue_title">SWR</strong>
+                <br />
+                <span class="card_desc">SWR / Return Loss</span>
+              </a>
+            </td>
+
+            <td class="rf_tool">
+              <a
+                class="card_link"
+                href="https://www.66pacific.com/calculators/coil-inductance-calculator.aspx"
+                target="_blank"
+              >
+                <strong class="blue_title">INDUCTANCE</strong>
+                <br />
+                <span class="card_desc">Coil Calculator</span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- =========================================================
      BAND REFERENCE
      ========================================================= -->
-	<div style="background:#0b2638; border-radius:8px; border:1px solid #32739b; color:#f4b942; font-family:Oswald; font-size:19px; font-weight:bold; letter-spacing:0.3px; margin-bottom:6px; margin-left:8px; margin-right:8px; margin-top:10px; padding:10px 14px; text-transform:uppercase; vertical-align:middle;">
-		<img src="https://www.qrz.com/hampages/kr3lax/HRQUICKREF.png"/>
-	</div>
-	<table align="center"
-	       border="0"
-	       cellpadding="7"
-	       cellspacing="1">
-			<tr style="background:#091b28;width:98%">
-				<td><img src="https://www.qrz.com/hampages/kr3lax/bands.png"/></td>
-			</tr>
-	</table>
-	<!-- =========================================================
+
+      <div class="section_headers">HF BAND QUICK REFERENCE</div>
+
+      <table align="center" border="0" cellpadding="7" cellspacing="1">
+        <tr style="background: #091b28; width: 98%">
+          <td>
+            <img src="bands.png" />
+          </td>
+        </tr>
+      </table>
+
+      <!-- =========================================================
      BAND PLAN / REFERENCE BUTTONS
      ========================================================= -->
-	<table border="0"
-	       cellpadding="6"
-	       cellspacing="8"
-	       style="width:100%">
-		<tbody>
-			<tr>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-					<a href="https://www.arrl.org/band-plan"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>ARRL BAND PLAN</strong>
-						<br/>
-						<span style="color:#ffffff;font-size:12px">US Amateur Bands</span>
-					</a>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-					<a href="https://www.arrl.org/frequency-allocations"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>FREQUENCIES</strong>
-						<br/>
-						<span style="color:#ffffff;font-size:12px">Amateur Allocations</span>
-					</a>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-					<a href="https://www.arrl.org/graphical-frequency-allocations"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>BAND CHARTS</strong>
-						<br/>
-						<span style="color:#ffffff;font-size:12px">Graphical Reference</span>
-					</a>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-					<a href="https://www.arrl.org/operating"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>OPERATING</strong>
-						<br/>
-						<span style="color:#ffffff;font-size:12px">ARRL Resources</span>
-					</a>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<!-- =========================================================
+
+      <table
+        border="0"
+        cellpadding="6"
+        cellspacing="8"
+        class="band_reference_links"
+      >
+        <tbody>
+          <tr>
+            <td class="band_reference_link">
+              <a href="https://www.arrl.org/band-plan" target="_blank">
+                <strong class="blue_title">ARRL BAND PLAN</strong>
+                <br />
+                <span class="card_desc">US Amateur Bands</span>
+              </a>
+            </td>
+
+            <td class="band_reference_link">
+              <a
+                href="https://www.arrl.org/frequency-allocations"
+                target="_blank"
+              >
+                <strong class="blue_title">FREQUENCIES</strong>
+                <br />
+                <span class="card_desc">Amateur Allocations</span>
+              </a>
+            </td>
+
+            <td class="band_reference_link">
+              <a
+                href="https://www.arrl.org/graphical-frequency-allocations"
+                target="_blank"
+              >
+                <strong class="blue_title">BAND CHARTS</strong>
+                <br />
+                <span class="card_desc">Graphical Reference</span>
+              </a>
+            </td>
+
+            <td class="band_reference_link">
+              <a href="https://www.arrl.org" target="_blank">
+                <strong class="blue_title">OPERATING</strong>
+                <br />
+                <span class="card_desc">ARRL Resources</span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- =========================================================
      ARIZONA RESOURCES
      ========================================================= -->
-	<div style="background:#0b2638; border-radius:8px; border:1px solid #32739b; color:#f4b942; font-family:Oswald; font-size:19px; font-weight:bold; letter-spacing:0.3px; margin-bottom:6px; margin-left:8px; margin-right:8px; margin-top:10px; padding:10px 14px; text-transform:uppercase; vertical-align:middle;">
-		<img src="https://www.qrz.com/hampages/kr3lax/AZRESOURCES.png"/>
-	</div>
-	<table border="0"
-	       cellpadding="6"
-	       cellspacing="8"
-	       style="width:100%">
-		<tbody>
-			<tr>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-					<a href="https://www.repeaterbook.com/repeaters/location_search.php?state_id=04"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>AZ REPEATERS</strong>
-						<br/>
-						<span style="color:#ffffff;font-size:12px">RepeaterBook</span>
-					</a>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-					<a href="https://www.azfreqcoord.org/"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>AZ FREQUENCY COORD.</strong>
-						<br/>
-						<span style="color:#ffffff;font-size:12px">Arizona Coordination</span>
-					</a>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-					<a href="https://www.weather.gov/psr/"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>NWS PHOENIX</strong>
-						<br/>
-						<span style="color:#ffffff;font-size:12px">Local Weather</span>
-					</a>
-				</td>
-				<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-					<a href="https://www.weather.gov/skywarn/"
-					   style="color:#58bfff; text-decoration:none;"
-					   target="_blank">
-						<strong>SKYWARN</strong>
-						<br/>
-						<span style="font-size:12px">Severe Weather</span>
-					</a>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<!-- =========================================================
+
+      <div class="section_headers">ARIZONA & LOCAL RESOURCES</div>
+
+      <table border="0" cellpadding="6" cellspacing="8" class="az_resources">
+        <tbody>
+          <tr>
+            <td class="az_resource">
+              <a
+                href="https://www.repeaterbook.com/repeaters/location_search.php?state_id=04"
+                target="_blank"
+              >
+                <strong class="blue_title">AZ REPEATERS</strong>
+                <br />
+                <span class="card_desc">RepeaterBook</span>
+              </a>
+            </td>
+
+            <td class="az_resource">
+              <a href="https://www.azfreqcoord.org/" target="_blank">
+                <strong class="blue_title">AZ FREQUENCY COORD.</strong>
+                <br />
+                <span class="card_desc">Arizona Coordination</span>
+              </a>
+            </td>
+
+            <td class="az_resource">
+              <a href="https://www.weather.gov/psr/" target="_blank">
+                <strong class="blue_title">NWS PHOENIX</strong>
+                <br />
+                <span class="card_desc">Local Weather</span>
+              </a>
+            </td>
+
+            <td class="az_resource">
+              <a href="https://www.weather.gov/skywarn/" target="_blank">
+                <strong class="blue_title">SKYWARN</strong>
+                <br />
+                <span class="card_desc">Severe Weather</span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- =========================================================
      LIVE RADIO TOOLS
      ========================================================= -->
-	<div style="background:#0b2638; border-radius:8px; border:1px solid #32739b; color:#f4b942; font-family:Oswald; font-size:19px; font-weight:bold; letter-spacing:0.3px; margin-bottom:6px; margin-left:8px; margin-right:8px; margin-top:10px; padding:10px 14px; text-transform:uppercase; vertical-align:middle;">
-		<img src="https://www.qrz.com/hampages/kr3lax/LIVERADIO.png"/>
-	</div>
-	<table border="0"
-	       cellpadding="6"
-	       cellspacing="8"
-	       style="width:100%">
-		<tr>
-			<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-				<div style="font-size:28px">
-					<a href="https://www.dxheat.com/"
-					   style="color:#ffffff; text-decoration:none;"
-					   target="_blank">🌎</a>
-				</div>
-				<a href="https://www.dxheat.com/"
-				   style="color:#58bfff; text-decoration:none;"
-				   target="_blank">
-					<strong>DXHEAT</strong>
-					<br/>
-					<span style="color:#ffffff;font-size:12px">Live DX Cluster</span>
-				</a>
-			</td>
-			<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-				<div style="font-size:28px">
-					<a href="https://pskreporter.info/"
-					   style="color:#ffffff; text-decoration:none;"
-					   target="_blank">📊</a>
-				</div>
-				<a href="https://pskreporter.info/"
-				   style="color:#58bfff; text-decoration:none;"
-				   target="_blank">
-					<strong>PSK REPORTER</strong>
-					<br/>
-					<span style="color:#ffffff;font-size:12px">Digital Reception Map</span>
-				</a>
-			</td>
-			<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-				<div style="font-size:28px">
-					<a href="https://www.reversebeacon.net/"
-					   style="color:#ffffff; text-decoration:none;"
-					   target="_blank">📡</a>
-				</div>
-				<a href="https://www.reversebeacon.net/"
-				   style="color:#58bfff; text-decoration:none;"
-				   target="_blank">
-					<strong>REVERSE BEACON</strong>
-					<br/>
-					<span style="color:#ffffff;font-size:12px">CW / RTTY Spots</span>
-				</a>
-			</td>
-			<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-				<div style="font-size:28px">
-					<a href="https://www.wsprnet.org/"
-					   style="color:#ffffff; text-decoration:none;"
-					   target="_blank">〰</a>
-				</div>
-				<a href="https://www.wsprnet.org/"
-				   style="color:#58bfff; text-decoration:none;"
-				   target="_blank">
-					<strong>WSPRNET</strong>
-					<br/>
-					<span style="color:#ffffff;font-size:12px">Weak Signal Propagation</span>
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-				<div style="font-size:28px">
-					<a href="https://aprs.fi/"
-					   style="color:#ffffff; text-decoration:none;"
-					   target="_blank">📍</a>
-				</div>
-				<a href="https://aprs.fi/"
-				   style="color:#58bfff; text-decoration:none;"
-				   target="_blank">
-					<strong>APRS.FI</strong>
-					<br/>
-					<span style="color:#ffffff;font-size:12px">Live APRS Tracking</span>
-				</a>
-			</td>
-			<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-				<div style="font-size:28px">
-					<a href="https://www.websdr.org/"
-					   style="color:#ffffff; text-decoration:none;"
-					   target="_blank">🎧</a>
-				</div>
-				<a href="https://www.websdr.org/"
-				   style="color:#58bfff; text-decoration:none;"
-				   target="_blank">
-					<strong>WEBSDR</strong>
-					<br/>
-					<span style="color:#ffffff;font-size:12px">Listen Worldwide</span>
-				</a>
-			</td>
-			<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-				<div style="font-size:28px">
-					<a href="https://rx-tx.info/map-sdr-points"
-					   style="color:#ffffff; text-decoration:none;"
-					   target="_blank">🌐</a>
-				</div>
-				<a href="https://rx-tx.info/map-sdr-points"
-				   style="color:#58bfff; text-decoration:none;"
-				   target="_blank">
-					<strong>ONLINE SDR MAP</strong>
-					<br/>
-					<span style="color:#ffffff;font-size:12px">Remote Receivers</span>
-				</a>
-			</td>
-			<td style="background-color:#0d2b40; background:#0d2b40; border-color:#3383b5; border-radius:8px; border-style:solid; border-width:1px; padding:14px; text-align:center; vertical-align:top; width:25%">
-				<div style="font-size:28px">
-					<a href="https://www.qrz.com/"
-					   style="color:#ffffff; text-decoration:none;"
-					   target="_blank">🔎</a>
-				</div>
-				<a href="https://www.qrz.com/"
-				   style="color:#58bfff; text-decoration:none;"
-				   target="_blank">
-					<strong>QRZ.COM</strong>
-					<br/>
-					<span style="color:#ffffff;font-size:12px">Callsign Lookup</span>
-				</a>
-			</td>
-		</tr>
-	</table>
-	<!-- =========================================================
+
+      <div class="section_headers">LIVE RADIO TOOLS & MAPS</div>
+
+      <table
+        border="0"
+        cellpadding="6"
+        cellspacing="8"
+        class="live_radio_tools"
+      >
+        <tbody>
+          <tr>
+            <td class="live_radio_card">
+              <div class="live_radio_icon">
+                <a href="https://www.dxheat.com/" target="_blank">🌎</a>
+              </div>
+
+              <a href="https://www.dxheat.com/" target="_blank">
+                <strong class="blue_title">DXHEAT</strong>
+                <br />
+                <span class="live_radio_desc">Live DX Cluster</span>
+              </a>
+            </td>
+
+            <td class="live_radio_card">
+              <div class="live_radio_icon">
+                <a href="https://pskreporter.info/" target="_blank">📊</a>
+              </div>
+
+              <a href="https://pskreporter.info/" target="_blank">
+                <strong class="blue_title">PSK REPORTER</strong>
+                <br />
+                <span class="live_radio_desc">Digital Reception Map</span>
+              </a>
+            </td>
+
+            <td class="live_radio_card">
+              <div class="live_radio_icon">
+                <a href="https://www.reversebeacon.net/" target="_blank">📡</a>
+              </div>
+
+              <a href="https://www.reversebeacon.net/" target="_blank">
+                <strong class="blue_title">REVERSE BEACON</strong>
+                <br />
+                <span class="live_radio_desc">CW / RTTY Spots</span>
+              </a>
+            </td>
+
+            <td class="live_radio_card">
+              <div class="live_radio_icon">
+                <a href="https://www.wsprnet.org/" target="_blank">〰</a>
+              </div>
+
+              <a href="https://www.wsprnet.org/" target="_blank">
+                <strong class="blue_title">WSPRNET</strong>
+                <br />
+                <span class="live_radio_desc">Weak Signal Propagation</span>
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="live_radio_card">
+              <div class="live_radio_icon">
+                <a href="https://aprs.fi/" target="_blank">📍</a>
+              </div>
+
+              <a href="https://aprs.fi/" target="_blank">
+                <strong class="blue_title">APRS.FI</strong>
+                <br />
+                <span class="live_radio_desc">Live APRS Tracking</span>
+              </a>
+            </td>
+
+            <td class="live_radio_card">
+              <div class="live_radio_icon">
+                <a href="https://www.websdr.org/" target="_blank">🎧</a>
+              </div>
+
+              <a href="https://www.websdr.org/" target="_blank">
+                <strong class="blue_title">WEBSDR</strong>
+                <br />
+                <span class="live_radio_desc">Listen Worldwide</span>
+              </a>
+            </td>
+
+            <td class="live_radio_card">
+              <div class="live_radio_icon">
+                <a href="https://rx-tx.info/map-sdr-points" target="_blank"
+                  >🌐</a
+                >
+              </div>
+
+              <a href="https://rx-tx.info/map-sdr-points" target="_blank">
+                <strong class="blue_title">ONLINE SDR MAP</strong>
+                <br />
+                <span class="live_radio_desc">Remote Receivers</span>
+              </a>
+            </td>
+
+            <td class="live_radio_card">
+              <div class="live_radio_icon">
+                <a href="https://www.qrz.com/" target="_blank">🔎</a>
+              </div>
+
+              <a href="https://www.qrz.com/" target="_blank">
+                <strong class="blue_title">QRZ.COM</strong>
+                <br />
+                <span class="live_radio_desc">Callsign Lookup</span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- =========================================================
      ABOUT / STATION / PROJECTS
      ========================================================= -->
-	<div style="background:#0b2638; border-radius:8px; border:1px solid #32739b; color:#f4b942; font-family:Oswald; font-size:19px; font-weight:bold; letter-spacing:0.3px; margin-bottom:6px; margin-left:8px; margin-right:8px; margin-top:10px; padding:10px 14px; text-transform:uppercase; vertical-align:middle;">
-		<img src="https://www.qrz.com/hampages/kr3lax/ABOUTKR3LAX.png"/>
-	</div>
-	<table border="0"
-	       cellpadding="0"
-	       cellspacing="8"
-	       style="width:100%">
-		<tbody>
-			<tr>
-				<td style="background-color:#081a27; background:#081a27; border-color:#276184; border-radius:8px; border-style:solid; border-width:1px; padding:15px; text-align:left; vertical-align:top; width:33.33%">
-					<div style="color:#f4b942; font-family:Oswald; font-size:17px; letter-spacing:0.3px; margin-bottom:10px; text-transform:uppercase">
-						<img src="https://www.qrz.com/hampages/kr3lax/MYSTATION.png"/>
-					</div>
-					<div style="color:ffffff; font-size:13px; line-height:1.7">
-						<strong>Location:</strong>Mesa, Arizona<br/>
-						<strong>Grid:</strong>DM43<br/>
-						<br/>
-						<strong>Operating:</strong>
-						<br/>
-							HF VHF UHF<br/>
-							CW SSB Digital<br/>
-							Satellites<br/>
-							Emergency Communications<br/>
-						<br/>
-						<strong>Amplifier:</strong>
-						<br/>
-							Ameritron AL-811H<br/>
-						<br/>
-						<strong>Antennas:</strong>
-						<br/>
-							Dipoles<br/>
-							Verticals<br/>
-							Portable Antennas<br/>
-							Satellite Yagis
-						</div>
-				</td>
-				<td style="background-color:#081a27; background:#081a27; border-color:#276184; border-radius:8px; border-style:solid; border-width:1px; padding:15px; padding:15px; text-align:left; vertical-align:top; width:33.33%">
-					<div style="color:#f4b942; font-family:Oswald; font-size:17px; letter-spacing:0.3px; margin-bottom:10px; text-transform:uppercase">
-						<img src="https://www.qrz.com/hampages/kr3lax/CURRENTPROJECTS.png"/>
-					</div>
-					<div style="color:ffffff; font-size:13px; line-height:1.8">⚙ ESP32 Satellite Rotator<br/>
-							📡 Portable Multiband Verticals	<br/>
-							〰 CW Keyer / Paddle Projects<br/>
-							🔀 Antenna Switching Systems<br/>
-							🖨 3D Printed Radio Accessories<br/>
-							🛰 Satellite Antennas<br/>
-							🔋 Portable Radio Power Systems<br/>
-							🔧 Whatever is currently on the bench...						
-						</div>
-				</td>
-				<td style="background-color:#081a27; background:#081a27; border-color:#276184; border-radius:8px; border-style:solid; border-width:1px; padding:15px; padding:15px; text-align:left; vertical-align:top; width:33.33%">
-					<div style="color:#f4b942; font-family:Oswald; font-size:17px; letter-spacing:0.3px; margin-bottom:10px; text-transform:uppercase">
-						<img src="WHYHAMRADIO.png"/>
-					</div>
-					<div style="color:ffffff; font-size:13px; line-height:1.7">For me, amateur radio is a mix of communication, experimentation, problem solving, building, learning, and public service.<br/>
-						<br/>
-			One day it is HF DX.<br/>
-						<br/>
-			The next it is CW, satellites, antennas, emergency communications, or trying to figure out why something that modeled perfectly has a 3:1 SWR.<br/>
-						<br/>
-						<em>Same waves. A brighter world.</em>
-					</div>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<!-- =========================================================
+
+      <div class="section_headers">ABOUT KR3LAX</div>
+
+      <table border="0" cellpadding="0" cellspacing="8" class="bottom_sections">
+        <tbody>
+          <tr>
+            <td class="bottom_section">
+              <div class="subsection_header">MY STATION</div>
+
+              <div class="bottom_section_content">
+                <strong>Operating:</strong>
+                <br />
+                HF VHF UHF<br />
+                CW SSB Digital<br />
+                Satellites<br />
+                Emergency Communications<br />
+                <br />
+                <strong>Radios:</strong>
+                <br />
+                ICOM-7300<br />
+                Yaesu FTM-400XDR/DE<br />
+                <br />
+                <strong>Amplifier:</strong>
+                <br />
+                Ameritron AL-811H<br />
+                <br />
+                <strong>Antennas:</strong>
+                <br />
+                Dipoles<br />
+                Verticals<br />
+                Portable Antennas<br />
+                Satellite Yagis
+              </div>
+            </td>
+            <td class="bottom_section">
+              <div class="subsection_header">CURRENT PROJECTS</div>
+              <div class="bottom_section_content">
+                ⚙ ESP32 Satellite Rotator<br />
+                📡 Portable Multiband Verticals<br />
+                ·− Learning Morse Code<br />
+                〰 CW Keyer / Paddle Projects<br />
+                🔀 Antenna Switching Systems<br />
+                🖨 3D Printed Radio Accessories<br />
+                🛰 Satellite Antennas<br />
+                🔋 Portable Radio Power Systems<br />
+                🔧 Whatever is currently on the bench...
+              </div>
+            </td>
+
+            <td class="bottom_section">
+              <div class="subsection_header">WHY AMATEUR RADIO?</div>
+              <div class="bottom_section_content">
+                For me, amateur radio is a mix of communication,
+                experimentation, problem solving, building, learning, and public
+                service.<br />
+                <br />
+                One day it is HF DX.<br />
+                <br />
+                The next it is CW, satellites, antennas, emergency
+                communications, or trying to figure out why something that
+                modeled perfectly has a 3:1 SWR.<br />
+                <br />
+                <em>Same waves. A brighter world.</em>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- =========================================================
      FOOTER IMAGE
-     Replace FOOTER_IMAGE_URL with your hosted footer image
      ========================================================= -->
-	<div style="margin-bottom:0; margin-left:0; margin-right:0; margin-top:10px; text-align:center">
-		<img alt="73 de KR3LAX"
-		     src="footer.gif"
-		     style="border:0; height:auto; width:100%"/>
-	</div>
-</div>
-</body>
+
+      <div
+        style="
+          margin-bottom: 0;
+          margin-left: 0;
+          margin-right: 0;
+          margin-top: 10px;
+          text-align: center;
+        "
+      >
+        <img
+          alt="73 de KR3LAX"
+          src="footer.gif"
+          style="border: 0; height: auto; width: 100%"
+        />
+      </div>
+    </div>
+  </body>
 </html>
